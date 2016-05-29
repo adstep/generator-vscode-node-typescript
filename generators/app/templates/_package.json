@@ -60,6 +60,7 @@
     "tslint-stylish": "^2.1.0-beta",
     "typescript": "^1.7.5",
     "typings": "^1.0.4",
+    "watchify": "^3.7.0",
     "yargs": "^3.31.0"
   }
 }

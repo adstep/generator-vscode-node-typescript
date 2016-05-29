@@ -6,14 +6,14 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-tonysneed-vscode-typescript:app', function () {
+describe('generator-vscode-node-typescript:app', function () {
   before  (function () {
     return helpers.run(path.join( __dirname, '../generators/app'))
       .withOptions({skipInstall: true})
-      .toPromise();                   // Get a Promise back for when the generator finishes
+      .toPromise();
   });
 
-  it('creates files', function () {
+  it('generates files', function () {
     assert.file([
       '.vscode/launch.json',
       '.vscode/tasks.json',
@@ -45,7 +45,7 @@ describe('generator-tonysneed-vscode-typescript:app', function () {
     ]);
   });
 
-  it('creates typings', function () {
+  it('generates typings', function () {
     assert.file([
       'typings/index.d.ts',
       'typings/globals/jasmine/index.d.ts',

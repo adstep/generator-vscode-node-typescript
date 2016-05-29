@@ -2,18 +2,18 @@
 var path = require('path');
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
-var excludeGitignore = require('gulp-exclude-gitignore');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 
+var jsSrc = [
+  'generators/app/index.js',
+  'test/app.js'
+];
+
 gulp.task('static', function () {
-  return gulp.src([
-    'generators/app/index.js',
-    'test/app.js'
-  ])
-    .pipe(excludeGitignore())
+  return gulp.src(jsSrc)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -25,7 +25,6 @@ gulp.task('nsp', function (cb) {
 
 gulp.task('pre-test', function () {
   return gulp.src('generators/app/index.js')
-    .pipe(excludeGitignore())
     .pipe(istanbul({
       includeUntested: true
     }))
@@ -48,7 +47,7 @@ gulp.task('test', ['pre-test'], function (cb) {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['generators/**/*.js', 'test/**'], ['test']);
+  gulp.watch(jsSrc, ['test']);
 });
 
 gulp.task('prepublish', ['nsp']);

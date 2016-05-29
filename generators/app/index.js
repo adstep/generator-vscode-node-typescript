@@ -12,16 +12,16 @@ module.exports = yeoman.generators.Base.extend({
     this.argument('appname', {type: String, required: false});
 
     this.option('skip-install', {
-      desc: 'Whether dependencies should be installed',
-      defaults: false
+        desc: 'Whether dependencies should be installed',
+        defaults: false
     });
 
     this.sourceRoot(path.join(path.dirname(this.resolved), 'templates'));
   },
 
-  prompting: function () {
+  initialization: function () {
     this.log(yosay(
-        'Welcome to Tony Sneed\'s ' + chalk.yellow('Visual Studio Code TypeScript') + ' generator!'
+        'Welcome to Adam Stephenson\'s ' + chalk.yellow('Visual Studio Code Node-TypeScript') + ' generator!'
     ));
 
     var done = this.async();
@@ -44,51 +44,44 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   writing: {
-    project: function () {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {
-          appname: this.appname
-        });
-      this.fs.copyTpl(
-        this.templatePath('_README.md'),
-        this.destinationPath('README.md'),
-        {
+        project: function () {
+        this.fs.copyTpl(
+            this.templatePath('_package.json'),
+            this.destinationPath('package.json'),
+            {
             appname: this.appname
-        });
+            });
+        this.fs.copyTpl(
+            this.templatePath('_README.md'),
+            this.destinationPath('README.md'),
+            {
+                appname: this.appname
+            });
+        },
+        files: function () {
+            this.copy('editorconfig', '.editorconfig');
+            this.copy('gitattributes', '.gitattributes');
+            this.copy('gitignore', '.gitignore');
+            this.copy('jscsrc', '.jscsrc');
+            this.copy('jshintrc', '.jshintrc');
+            this.copy('travis.yml', '.travis.yml');
+            this.copy('_gulp.config.js', 'gulp.config.js');
+            this.copy('_gulpfile.js', 'gulpfile.js');
+            this.copy('_karma.conf.js', 'karma.conf.js');
+            this.copy('_LICENSE', 'LICENSE');
+            this.copy('_SpecRunner.html', 'SpecRunner.html');
+            this.copy('_typings.json', 'typings.json');
+            this.copy('_tslint.json', 'tslint.json');
+            this.copy('_tsconfig.json', 'tsconfig.json');
+        },
+        directories: function () {
+            this.directory('vscode', '.vscode');
+            this.directory('_lib', 'lib');
+            this.directory('_src', 'src');
+            this.directory('_util', 'util');
+            this.directory('_typings', 'typings');
+        }
     },
-    files: function () {
-        this.copy('editorconfig', '.editorconfig');
-        this.copy('gitattributes', '.gitattributes');
-        this.copy('gitignore', '.gitignore');
-        this.copy('jscsrc', '.jscsrc');
-        this.copy('jshintrc', '.jshintrc');
-        this.copy('travis.yml', '.travis.yml');
-        this.copy('_gulp.config.js', 'gulp.config.js');
-        this.copy('_gulpfile.js', 'gulpfile.js');
-        this.copy('_karma.conf.js', 'karma.conf.js');
-        this.copy('_LICENSE', 'LICENSE');
-        this.copy('_SpecRunner.html', 'SpecRunner.html');
-        this.copy('_typings.json', 'typings.json');
-        this.copy('_tslint.json', 'tslint.json');
-        this.copy('_tsconfig.json', 'tsconfig.json');
-    },
-    directories: function () {
-        this.directory('vscode', '.vscode');
-        this.directory('_lib', 'lib');
-        this.directory('_src', 'src');
-        this.directory('_util', 'util');
-        this.directory('_typings', 'typings');
-    }
-  },
-
-//   install: function () {
-//     this.installDependencies({
-//       bower: false,
-//       skipInstall: this.options['skip-install']
-//     });
-//   },
 
     install: {
         npmInstall: function () {
@@ -99,7 +92,7 @@ module.exports = yeoman.generators.Base.extend({
         }
     },
 
-  end: function () {
-    this.log(chalk.yellow.bold('Installation successful!'));
-  }
+    end: function () {
+        this.log(chalk.yellow.bold('Installation successful!'));
+    }
 });

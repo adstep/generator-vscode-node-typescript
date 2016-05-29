@@ -1,7 +1,7 @@
 {
   "name": "generator-vscode-node-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yeoman generator for Node-TypeScript projects using Visual Studio Code",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/adstep/generator-vscode-node-typescript.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Adam Stephenson",
+    "email": "stephensonadamj@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adstep/generator-vscode-node-typescript/issues"
   },
