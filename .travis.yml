@@ -2,5 +2,6 @@ sudo: false
 language: node_js
 node_js:
   - 'stable'
+script: gulp test
 before_script:
     - npm install
