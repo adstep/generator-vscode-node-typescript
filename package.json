@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/adstep/generator-vscode-node-typescript.git"
   },
+  "keywords": [
+    "yeoman-generator",
+    "visual-studio-code",
+    "typescript"
+  ],
   "author": {
     "name": "Adam Stephenson",
     "email": "stephensonadamj@gmail.com"
