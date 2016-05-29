@@ -38,23 +38,6 @@
 			"outDir": "${workspaceRoot}/dist"
 		},
 		{
-			"name": "Debug Current TypeScript Test",
-			"type": "node",
-			"request": "launch",
-			"program": "${workspaceRoot}/node_modules/jasmine-node/bin/jasmine-node",
-			"stopOnEntry": false,
-			"args": [
-                // File currently being viewed
-                "${file}",
-				"--verbose",
-                "--test-dir",
-                "dist"
-            ],
-			"cwd": "${workspaceRoot}",
-			"sourceMaps": true,
-			"outDir": "${workspaceRoot}/dist"
-		},
-		{
 			"name": "Debug Gulp Task",
 			"type": "node",
 			"request": "launch",
