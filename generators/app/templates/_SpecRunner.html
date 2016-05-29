@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v2.4.1</title>
+
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+    <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+    <script src="util/custom.boot.js"></script>
+    <!--<script>
+        /* global System */
+        // Configure systemjs to use the .js extension for imports from the src/js folder
+        System.config({
+            packages: {
+                'dist': {defaultExtension: 'js'}
+            }
+        });
+
+
+        Promise.all([
+            System.import('./dist/greeter/greeter.spec'),
+            System.import('./dist/italiangreeter/italiangreeter.spec')
+        ]).then(function() {
+            console.log('donezo');
+
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.execute();
+            // var htmlReporter = new jasmine.HtmlReporter({
+            //     env: env,
+            //     /*onRaiseExceptionsClick: function() { queryString.navigateWithNewParam("catch", !env.catchingExceptions()); },
+            //     onThrowExpectationsClick: function() { queryString.navigateWithNewParam("throwFailures", !env.throwingExpectationFailures()); },
+            //     onRandomClick: function() { queryString.navigateWithNewParam("random", !env.randomTests()); },
+            //     addToExistingQueryString: function(key, value) { return queryString.fullStringWithNewParam(key, value); },*/
+            //     getContainer: function() { return document.body; },
+            //     createElement: function() { return document.createElement.apply(document, arguments); },
+            //     createTextNode: function() { return document.createTextNode.apply(document, arguments); },
+            //     timer: new jasmine.Timer()
+            // });
+
+            // jasmineEnv.addReporter(reporter);
+            // setTimeout(function () {
+            //     jasmineEnv.execute();
+            // // Without this setTimeout, the specs don't always get execute in webKit browsers, I don't know why
+            // }, 10);
+        });
+    </script>-->
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- inject:specs:js -->
+    <!-- endinject -->
+
+</head>
+
+<body>
+</body>
+
+
+</html>
