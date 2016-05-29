@@ -87,7 +87,6 @@ module.exports = yeoman.generators.Base.extend({
         npmInstall: function () {
             var generator = this;
             generator.npmInstall(null, { skipInstall: this.options['skip-install'] }, function () {
-                generator.spawnCommandSync('npm', ['install', '-g', 'typings'])
                 generator.spawnCommandSync('typings', ['install'])
             });
         }
