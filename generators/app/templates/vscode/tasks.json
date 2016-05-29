@@ -7,7 +7,7 @@
     ],
     "tasks": [
         {
-            "taskName": "typescript-compile",
+            "taskName": "build",
             "isBuildCommand": true,
             "isTestCommand": false,
             "showOutput": "always",

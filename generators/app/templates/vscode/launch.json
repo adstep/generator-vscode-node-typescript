@@ -45,7 +45,7 @@
 			"stopOnEntry": false,
 			"args": [
                 // Replace 'default' with name of gulp task to run
-                "internal-test-build"
+                "default"
             ],
 			"cwd": "${workspaceRoot}"
 		}
