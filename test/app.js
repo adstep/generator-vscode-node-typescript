@@ -47,7 +47,7 @@ describe('generator-vscode-node-typescript:app', function () {
 
   it('generates typings', function () {
     assert.file([
-      //'typings/index.d.ts',
+      'typings/index.d.ts',
       'typings/globals/jasmine/index.d.ts',
       'typings/globals/node/index.d.ts',
     ]);
