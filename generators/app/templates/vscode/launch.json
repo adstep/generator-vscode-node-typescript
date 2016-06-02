@@ -7,7 +7,7 @@
 			"request": "launch",
             // File currently being viewed
 			"program": "${file}",
-			"stopOnEntry": true,
+			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}"
 		},
@@ -17,7 +17,7 @@
 			"request": "launch",
             // File currently being viewed
 			"program": "${file}",
-			"stopOnEntry": true,
+			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}",
 			"sourceMaps": true,

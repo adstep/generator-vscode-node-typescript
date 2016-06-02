@@ -64,6 +64,10 @@
     + Also included are sourcemaps and type defitions.
 
 3. Run **tests**.
+  - Add the following to File -> Preferences -> keyboard shortcuts:
+    ```
+    { "key": "ctrl+shift+t",          "command": "workbench.action.tasks.test" }
+    ```
   - Run the tests by pressing **Cmd+Shift+T**.
     + You should see results displayed in the **Output** window.
 
