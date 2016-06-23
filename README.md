@@ -72,7 +72,7 @@
     + You should see results displayed in the **Output** window.
 
 4. **Debug** tests.
-  - Set a **breakpoint** on line 10 in `greeter.spec.ts`, then press **Ctrk+Shift+D**
+  - Set a **breakpoint** on line 10 in `greeter.spec.ts`, then press **Ctrl+Shift+D**
     to view debugging options.
     + Select **Debug TypeScript Tests** from the dropdown and press **F5**
       to launch the debugger.
