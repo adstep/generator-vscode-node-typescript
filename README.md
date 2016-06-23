@@ -34,13 +34,13 @@
     ```shell
     ~/source/MyCoolTypeScriptProject $ yo vscode-node-typescript
 
-         _-----_
-        |       |    .--------------------------.
-        |--(o)--|    |  Welcome to Tony Sneed's |
-       `---------´   |    Visual Studio Code    |
-        ( _´U`_ )    |   TypeScript generator!  |
-        /___A___\    '--------------------------'
-         |  ~  |
+         _-----_     ╭──────────────────────────╮
+        |       |    │      Welcome to Adam     │
+        |--(o)--|    │    Stephenson's Visual   │
+       `---------´   │        Studio Code       │
+        ( _´U`_ )    │      Node-TypeScript     │
+        /___A___\   /│        generator!        │
+         |  ~  |     ╰──────────────────────────╯
        __'.___.'__
      ´   `  |° ´ Y `
 
@@ -72,9 +72,9 @@
     + You should see results displayed in the **Output** window.
 
 4. **Debug** tests.
-  - Set a **breakpoint** on line 15 in `greeter.spec.ts`, then press **Cmd+D**
+  - Set a **breakpoint** on line 10 in `greeter.spec.ts`, then press **Ctrk+Shift+D**
     to view debugging options.
-    + Select **Debug Current TypeScript Test** from the dropdown and press **F5**
+    + Select **Debug TypeScript Tests** from the dropdown and press **F5**
       to launch the debugger.
     + You should hit the breakpoint.
     + Press **F11** to step into `greeter.greet()`.
